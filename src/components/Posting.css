@@ -1,0 +1,32 @@
+.small-box {
+    max-width: 400px;
+}
+.dark-box {
+    background-color: #242424;
+    color: #fff;
+    margin-bottom: 10px;
+
+}
+.square-box {
+    max-width: 600px;
+    min-height: 400px;
+    border: 1px solid #242424;
+}
+.text-left {
+    float: left;
+}
+#box {
+    background-color: #E8E8E8;
+}
+#fields {
+    margin-top: 10px;
+}
+#ifYes {
+    visibility: hidden;
+}
+.btn-space {
+    margin-right: 5px;
+}
+#while{
+    margin-top: 10px;
+}

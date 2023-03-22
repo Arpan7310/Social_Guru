@@ -1,0 +1,43 @@
+.square-box {
+  max-width: 95%;
+  min-width: 600px;
+  
+
+}
+.job-card {
+  border: 1px solid #242424;
+  padding: 2px;
+  align-items: center;
+}
+.company-name {
+  font-size: 17.5px;
+  
+  word-spacing: 0.75;
+  border-radius: 5px;
+  display: inline-block;
+ font-weight: 600px;
+}
+.skill-set {
+  margin: 0 auto;
+  word-spacing: 0.75;
+  border-radius: 5px;
+  font-size: 14.5px;
+  transition:".3s";
+  cursor: pointer
+  ;
+  font-weight: 600;
+color: #242424;
+ 
+
+}
+.job-card:hover{
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  border-right: 6px solid #242424;
+  transition: .3s;
+}
+.filter{
+  border: 1px solid #242424;
+  height: 15vh;
+  padding: 15px;
+  background: whitesmoke;
+}
