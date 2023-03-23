@@ -45,6 +45,7 @@ import Basic_profile from "./profiles/Basic_profile";
 import Special_profile from "./profiles/Special_profile";
 import Academic_profile from "./profiles/Academic_profile";
 import Certification_profile from "./profiles/Certification_profile";
+import Publication_profile from "./profiles/Publication_profile";
 const socket = socketIO.connect("http://100.25.193.158:4001/");
 
 function App() {
@@ -63,6 +64,7 @@ function App() {
             <Route path='/Special_profile' component={Special_profile}/>
             <Route path='/Academic_profile' component={Academic_profile} />
             <Route path={'/Certification_profile'} component={Certification_profile} />
+            <Route path='/Publication_profile' component={Publication_profile} />
             <Route path="/Apply" component={Apply}></Route>
             <Route path="/Applied" component={Applied}></Route>
             <Route path="/Applications" component={Applications}></Route>
