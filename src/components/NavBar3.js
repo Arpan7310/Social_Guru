@@ -41,6 +41,8 @@ const NavBar3 = () => {
               <Nav.Link href="/Academic_profile">Academic profile</Nav.Link>
               <Nav.Link href="/Certification_profile">Certification profile</Nav.Link>
               <Nav.Link href='/Publication_profile'>Publication Profile</Nav.Link>
+              <Nav.Link href='/EmployeeAwards'>Employee Awards Profile</Nav.Link>
+              <Nav.Link href='/ExpectedOpportunity'>Expected Opportunity</Nav.Link>
             </Nav>
 
             <Button variant="outline-dark" as={Link} to="/Landing">

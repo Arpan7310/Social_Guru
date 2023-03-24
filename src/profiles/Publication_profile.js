@@ -54,12 +54,14 @@ let Publication_profile = () => {
     }).catch(err => {
       console.log(err);
     })
+    alert("Publication Profile saved successfully")
   };
 
   return (
     <>
     <Nav_Experts />
       <NavBar3 />
+      <h1 className="basic_profile_header">Complete Your Publication profile</h1>
       <form
         className="basic_profile_form"
         method="POST"

@@ -37,11 +37,13 @@ let Certification_profile = () => {
       }
     );
     console.log(profile);
+    alert("Certification Profile saved successfully")
   };
   return (
     <>
       <Nav_Experts />
       <NavBar3 />
+      <h1 className="basic_profile_header">Complete Your Certification profile</h1>
       <form
         className="basic_profile_form"
         method="POST"
@@ -71,6 +73,7 @@ let Certification_profile = () => {
           <DatePicker
             selected={startDate}
             onChange={(date) => setStartDate(date.toISOString())}
+            style={{width: '200px'}}
           />
         </div>
         <div className="basic_profile_field">

@@ -39,12 +39,14 @@ let Academic_profile = () => {
             console.log(res);
         })
         .catch(err => console.log(err))
+        alert("Academic Profile saved succesfully")
         console.log(profile);
     }
   return (
     <>
       <Nav_Experts />
       <NavBar3 />
+      <h1 className="basic_profile_header">Complete Your Academic profile</h1>
       <form
         className="basic_profile_form"
         method="POST"

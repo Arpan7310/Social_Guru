@@ -46,6 +46,8 @@ import Special_profile from "./profiles/Special_profile";
 import Academic_profile from "./profiles/Academic_profile";
 import Certification_profile from "./profiles/Certification_profile";
 import Publication_profile from "./profiles/Publication_profile";
+import Awards from "./profiles/Awards";
+import ExpectedOpportunity from "./profiles/ExpectedOpportunity";
 const socket = socketIO.connect("http://100.25.193.158:4001/");
 
 function App() {
@@ -65,6 +67,8 @@ function App() {
             <Route path='/Academic_profile' component={Academic_profile} />
             <Route path={'/Certification_profile'} component={Certification_profile} />
             <Route path='/Publication_profile' component={Publication_profile} />
+            <Route path={'/EmployeeAwards'} component={Awards} />
+            <Route path={'/ExpectedOpportunity'} component={ExpectedOpportunity} />
             <Route path="/Apply" component={Apply}></Route>
             <Route path="/Applied" component={Applied}></Route>
             <Route path="/Applications" component={Applications}></Route>
