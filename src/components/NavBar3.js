@@ -10,6 +10,13 @@ import "./Navbar.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Landing from "./Landing";
 const NavBar3 = () => {
+  let logOut = () => {
+    
+    let access_token = localStorage.getItem("access_token")
+    console.log(access_token);
+    window.location.href = '/'
+    localStorage.removeItem("access_token")
+  }
   return (
     <div>
       <Navbar bg="light" expand="lg">
@@ -45,7 +52,7 @@ const NavBar3 = () => {
               <Nav.Link href='/ExpectedOpportunity'>Expected Opportunity</Nav.Link>
             </Nav>
 
-            <Button variant="outline-dark" as={Link} to="/Landing">
+            <Button variant="outline-dark" onClick={logOut}>
               Log-Out
             </Button>
           </Navbar.Collapse>

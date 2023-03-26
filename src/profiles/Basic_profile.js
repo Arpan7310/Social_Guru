@@ -24,7 +24,7 @@ let Basic_profile = () => {
   let handleChange = (e) => {
     console.log(e.target.value);
     if (e.target.value == "true" || e.target.value == "false") {
-      let boolval = e.target.value === "True" ? true : false;
+      let boolval = e.target.value === "true" ? true : false;
       console.log(typeof(boolval));
       setProfile({
         ...profile,
