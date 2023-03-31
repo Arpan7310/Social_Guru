@@ -43,7 +43,7 @@ const lastname = event.target.lastname.value;
 const phonenumber = parseInt(event.target.phonenumber.value);
 const data = {organizationname, sector, email, password, firstname, lastname, phonenumber};
 console.log(data);
-axios.post("http://100.25.193.158:4000/client/", 
+axios.post("http://52.3.252.238:4000/client/", 
     data
 
 )

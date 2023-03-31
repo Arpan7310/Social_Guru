@@ -48,7 +48,7 @@ import Certification_profile from "./profiles/Certification_profile";
 import Publication_profile from "./profiles/Publication_profile";
 import Awards from "./profiles/Awards";
 import ExpectedOpportunity from "./profiles/ExpectedOpportunity";
-const socket = socketIO.connect("http://100.25.193.158:4001/");
+const socket = socketIO.connect("http://52.3.252.238:4001/");
 
 function App() {
   console.log(socket);

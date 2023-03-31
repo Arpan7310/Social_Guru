@@ -23,7 +23,7 @@ const Profile_com = () => {
 
   const fetchData = () => {
     axios
-      .get(`http://100.25.193.158:4000/client/find/?email=${value}`)
+      .get(`http://52.3.252.238:4000/client/find/?email=${value}`)
       .then((response) => {
         let worker = response.data;
         localStorage.setItem("ID_client", response.data.id);

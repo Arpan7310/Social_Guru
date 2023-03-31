@@ -46,7 +46,7 @@ let Basic_profile = () => {
     profile = { ...profile, empId: employeeId };
     console.log(profile);
     axios
-      .post(`http://100.25.193.158:4000/employee/saveProfile`, profile, {
+      .post(`http://52.3.252.238:4000/employee/saveProfile`, profile, {
         headers: {
           Authorization: `Bearer ${access_token}`,
         },

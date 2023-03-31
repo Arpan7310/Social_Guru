@@ -19,9 +19,10 @@ const Sign_in2 = () => {
           
           const email = event.target.email.value;
           const password = event.target.password.value;
-          const field2 = {email, password};
+          const type = 'client'
+          const field2 = {email, password, type};
           console.log(field2);
-          axios.post("http://100.25.193.158:4000/client/login", 
+          axios.post("http://52.3.252.238:4000/auth/login",
         field2)
         .then(response => {
           console.log(response);

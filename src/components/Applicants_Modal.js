@@ -27,7 +27,7 @@ const Applicants_Modal = (props) => {
     const data = { employeeId, jobId };
     console.log(data);
     axios
-      .post("http://100.25.193.158:4000/jobs/hire", data)
+      .post("http://52.3.252.238:4000/jobs/hire", data)
       .then((response) => {
         console.log(response);
         window.alert("Hired");
@@ -48,7 +48,7 @@ const Applicants_Modal = (props) => {
   const fetchApiData = async () => {
     try {
       const res = await fetch(
-        `http://100.25.193.158:4000/jobs/findEmployees?jobId=${props.jobid}`
+        `http://52.3.252.238:4000/jobs/findEmployees?jobId=${props.jobid}`
       );
       console.log(res);
       let x = await res.json();

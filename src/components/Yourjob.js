@@ -25,7 +25,7 @@ function Yourjob(props) {
   const [store, setStore] = useState();
   useEffect(() => {
     axios
-      .get(`http://100.25.193.158:4000/employee/find/?email=${mail}`)
+      .get(`http://52.3.252.238:4000/employee/find/?email=${mail}`)
       .then((response) => {
         console.log(response);
         setStore(response.data.id);
@@ -42,7 +42,7 @@ function Yourjob(props) {
     const str = { jobId, employeeId };
     console.log(str);
     axios
-      .post("http://100.25.193.158:4000/employee/apply", str)
+      .post("http://52.3.252.238:4000/employee/apply", str)
       .then((response) => {
         console.log(response);
         window.alert("Applied Successfully");

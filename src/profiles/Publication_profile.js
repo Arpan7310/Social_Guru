@@ -44,7 +44,7 @@ let Publication_profile = () => {
     profile.author = [...authorList];
     profile.publishedat = publishedat;
     profile = {...profile, employeeId: Number(employeeId)} 
-    axios.post('http://100.25.193.158:4000/employee/savePublications', profile, {
+    axios.post('http://52.3.252.238:4000/employee/savePublications', profile, {
       headers: {
         Authorization: `Bearer ${access_token}`
       }

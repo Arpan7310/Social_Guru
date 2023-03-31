@@ -28,14 +28,15 @@ const Sign_in = (props) => {
     event.preventDefault();
     setState(event.target.email.value);
 
+    const type = 'employee'
     const email = event.target.email.value;
     const password = event.target.password.value;
-    const field = { email, password };
+    const field = { email, password, type };
 
     console.log(field);
 
     axios
-      .post("http://100.25.193.158:4000/auth/login", field)
+      .post("http://52.3.252.238:4000/auth/login", field)
       .then((response) => {
         console.log(response);
         // event.target.reset();

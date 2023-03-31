@@ -37,7 +37,7 @@ const Applications = () => {
   const fetchApiData = async (Id) => {
     try {
       const res = await fetch(
-        `http://100.25.193.158:4000/client/postedJobs?id=${Id}`
+        `http://52.3.252.238:4000/client/postedJobs?id=${Id}`
       );
       console.log(res);
       let x = await res.json();

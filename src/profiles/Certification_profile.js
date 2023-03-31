@@ -28,7 +28,7 @@ let Certification_profile = () => {
     profile.endDate = endDate;
     profile.grade = Number(profile.grade);
     axios.post(
-      "http://100.25.193.158:4000/employee/saveCertification",
+      "http://52.3.252.238:4000/employee/saveCertification",
       profile,
       {
         headers: {

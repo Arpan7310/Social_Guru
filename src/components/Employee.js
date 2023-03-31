@@ -36,7 +36,7 @@ const Employee = () => {
         const phonenumber = parseInt(event.target.phonenumber.value);
         const stack = {email, password, firstname, lastname, phonenumber};
         console.log(stack);
-        axios.post("http://100.25.193.158:4000/employee/", 
+        axios.post("http://52.3.252.238:4000/employee/", 
             stack
         
         )

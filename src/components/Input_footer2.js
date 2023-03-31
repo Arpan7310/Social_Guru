@@ -12,7 +12,7 @@ const Input_footer2 = (props) => {
   let clid = localStorage.getItem("email_client");
   useEffect(() => {
     axios
-      .get(`http://100.25.193.158:4000/employee/find/?email=${userid}`)
+      .get(`http://52.3.252.238:4000/employee/find/?email=${userid}`)
       .then((response) => {
         console.log(response);
         setEmpid(response.data.id);
@@ -26,7 +26,7 @@ const Input_footer2 = (props) => {
 
   useEffect(() => {
     axios
-      .get(`http://100.25.193.158:4000/client/find/?email=${clid}`)
+      .get(`http://52.3.252.238:4000/client/find/?email=${clid}`)
       .then((response) => {
         console.log(response);
         setClied(response.data.id);

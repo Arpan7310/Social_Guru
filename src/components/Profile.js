@@ -28,7 +28,7 @@ const Profile = (props) => {
   });
   const fetchData = () => {
     axios
-      .get(`http://100.25.193.158:4000/employee/find/?email=${value}`)
+      .get(`http://52.3.252.238:4000/employee/find/?email=${value}`)
       .then((response) => {
         let worker = response.data;
 

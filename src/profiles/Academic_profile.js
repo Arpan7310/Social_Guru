@@ -5,43 +5,44 @@ import NavBar3 from "../components/NavBar3";
 import Nav_Experts from "../components/Nav_Experts";
 
 let Academic_profile = () => {
-    let [profile, setProfile] = useState({
-        educationalQualification: '',
-        course: '',
-        specialisation: '',
-        institute: '',
-        percentage: ''
-    })
+  let [profile, setProfile] = useState({
+    educationalQualification: "",
+    course: "",
+    specialisation: "",
+    institute: "",
+    percentage: "",
+  });
 
-    let [startDate, setStartDate] = useState(new Date())
-    let [endDate, setEndDate] = useState(new Date())
-    let handleChange = (e) => {
-        setProfile({
-            ...profile,
-            [e.target.name]: e.target.value
-        })
-    }
-    let employeeId = localStorage.getItem("ID_employee");
-    let access_token = localStorage.getItem("access_token");
-    let handleSubmit = (e) => {
-        e.preventDefault()
-        profile.percentage = Number(profile.percentage)
-        profile['coursestart'] = startDate;
-        profile['courseend'] = endDate
-        console.log(profile);
-        profile = {...profile, employeeId: Number(employeeId)}
-        axios.post('http://100.25.193.158:4000/employee/saveAcademicProfile', profile, {
-            headers: {
-                Authorization: `Bearer ${access_token}`
-            }
-        })
-        .then(res => {
-            console.log(res);
-        })
-        .catch(err => console.log(err))
-        alert("Academic Profile saved succesfully")
-        console.log(profile);
-    }
+  let [startDate, setStartDate] = useState(new Date());
+  let [endDate, setEndDate] = useState(new Date());
+  let handleChange = (e) => {
+    setProfile({
+      ...profile,
+      [e.target.name]: e.target.value,
+    });
+  };
+  let employeeId = localStorage.getItem("ID_employee");
+  let access_token = localStorage.getItem("access_token");
+  let handleSubmit = (e) => {
+    e.preventDefault();
+    profile.percentage = Number(profile.percentage);
+    profile["coursestart"] = startDate;
+    profile["courseend"] = endDate;
+    console.log(profile);
+    profile = { ...profile, employeeId: Number(employeeId) };
+    axios
+      .post("http://52.3.252.238:4000/employee/saveAcademicProfile", profile, {
+        headers: {
+          Authorization: `Bearer ${access_token}`,
+        },
+      })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => console.log(err));
+    alert("Academic Profile saved succesfully");
+    console.log(profile);
+  };
   return (
     <>
       <Nav_Experts />
@@ -54,7 +55,9 @@ let Academic_profile = () => {
       >
         <div className="basic_profile_field">
           <div>
-            <label htmlFor="educationalQualification">Educational Qualification: </label>
+            <label htmlFor="educationalQualification">
+              Educational Qualification:{" "}
+            </label>
           </div>
           <input
             type={"text"}
@@ -95,13 +98,19 @@ let Academic_profile = () => {
           <div>
             <label htmlFor="coursestart">coursestart: </label>
           </div>
-          <DatePicker selected={startDate} onChange={(date) => setStartDate(date.toISOString())} />
+          <DatePicker
+            selected={startDate}
+            onChange={(date) => setStartDate(date.toISOString())}
+          />
         </div>
         <div className="basic_profile_field">
           <div>
             <label htmlFor="courseend">courseend: </label>
           </div>
-          <DatePicker selected={endDate} onChange={(date) => setEndDate(date.toISOString())} />
+          <DatePicker
+            selected={endDate}
+            onChange={(date) => setEndDate(date.toISOString())}
+          />
         </div>
         <div className="basic_profile_field">
           <div>
@@ -114,7 +123,13 @@ let Academic_profile = () => {
             onChange={handleChange}
           />
         </div>
-        <div className="submit"><input type={'submit'} value='submit' style={{padding: '0.8rem 1.8rem'}} /></div>
+        <div className="submit">
+          <input
+            type={"submit"}
+            value="submit"
+            style={{ padding: "0.8rem 1.8rem" }}
+          />
+        </div>
       </form>
     </>
   );

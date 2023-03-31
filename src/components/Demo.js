@@ -17,7 +17,7 @@ function Demo(props) {
     const otp = event.target.otp.value;
     const store = {email,otp};
     console.log(store);
-    axios.post("http://100.25.193.158:4000/client/verify",store).then(response => {
+    axios.post("http://52.3.252.238:4000/client/verify",store).then(response => {
       console.log(response);
       event.target.reset();
       window.alert("welcome")
