@@ -29,7 +29,7 @@ let Special_profile = () => {
     console.log('useeffect called');
     let getResponsiblities = () => {
       axios
-        .get("http://52.3.252.238:4000/employee/fetchResponsibilities")
+        .get("http://3.84.158.17:4000/employee/fetchResponsibilities")
         .then((respose) => {
           setResposiblity(respose.data);
           let array = []
@@ -106,7 +106,7 @@ let Special_profile = () => {
 
     axios
       .post(
-        "http://52.3.252.238:4000/employee/saveProfessionalProfile",
+        "http://3.84.158.17:4000/employee/saveProfessionalProfile",
         profile,
         {
           headers: `Bearer ${access_token}`,

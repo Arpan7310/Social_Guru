@@ -63,3 +63,10 @@
   background-color: #fff;
   color: #242424;
 }
+
+
+.spacing {
+
+  margin:50px;
+  padding: 10px;
+}

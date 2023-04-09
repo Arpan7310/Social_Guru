@@ -23,7 +23,7 @@ let Awards = () => {
     e.preventDefault();
     profile.date = date;
     profile = {...profile, empId: Number(employeeId)}
-    axios.post('http://52.3.252.238:4000/employee/saveEmployeeAwards', profile, {
+    axios.post('http://3.84.158.17:4000/employee/saveEmployeeAwards', profile, {
         headers: {
             Authorization: `Bearer ${access_token}`
         }

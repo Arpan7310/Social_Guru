@@ -27,7 +27,7 @@ const Applicants_Modal = (props) => {
     const data = { employeeId, jobId };
     console.log(data);
     axios
-      .post("http://52.3.252.238:4000/jobs/hire", data)
+      .post("http://3.84.158.17:4000/jobs/hire", data)
       .then((response) => {
         console.log(response);
         window.alert("Hired");
@@ -48,7 +48,7 @@ const Applicants_Modal = (props) => {
   const fetchApiData = async () => {
     try {
       const res = await fetch(
-        `http://52.3.252.238:4000/jobs/findEmployees?jobId=${props.jobid}`
+        `http://3.84.158.17:4000/jobs/findEmployees?jobId=${props.jobid}`
       );
       console.log(res);
       let x = await res.json();
@@ -96,7 +96,13 @@ const Applicants_Modal = (props) => {
                             {curElem.firstname} {curElem.lastname}
                           </td>
                           <td>
-                            <Button variant="info">Profile</Button>
+                           
+                          <Link
+                              className="btn btn-primary"
+                              to={`/ExpertsView/${empid}`}
+                            >
+                              Profile
+                            </Link>
                           </td>
                           <td>
                             <Link

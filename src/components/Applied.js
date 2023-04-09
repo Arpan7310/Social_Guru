@@ -30,9 +30,9 @@ const Applied = () => {
 
   const fetchApiData = async (Id) => {
     try {
-      // http://52.3.252.238:4000/employee/findAppliedJobs/?employeeId=2
+      // http://3.84.158.17:4000/employee/findAppliedJobs/?employeeId=2
       const res = await fetch(
-        `http://52.3.252.238:4000/employee/findAppliedJobs/?employeeId=${Id}`
+        `http://3.84.158.17:4000/employee/findAppliedJobs/?employeeId=${Id}`
       );
       console.log(res);
       let x = await res.json();

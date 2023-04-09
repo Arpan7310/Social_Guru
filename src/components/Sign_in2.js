@@ -22,7 +22,7 @@ const Sign_in2 = () => {
           const type = 'client'
           const field2 = {email, password, type};
           console.log(field2);
-          axios.post("http://52.3.252.238:4000/auth/login",
+          axios.post("http://3.84.158.17:4000/auth/login",
         field2)
         .then(response => {
           console.log(response);

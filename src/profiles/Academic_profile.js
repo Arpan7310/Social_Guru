@@ -31,7 +31,7 @@ let Academic_profile = () => {
     console.log(profile);
     profile = { ...profile, employeeId: Number(employeeId) };
     axios
-      .post("http://52.3.252.238:4000/employee/saveAcademicProfile", profile, {
+      .post("http://3.84.158.17:4000/employee/saveAcademicProfile", profile, {
         headers: {
           Authorization: `Bearer ${access_token}`,
         },

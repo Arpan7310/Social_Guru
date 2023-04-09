@@ -48,7 +48,10 @@ import Certification_profile from "./profiles/Certification_profile";
 import Publication_profile from "./profiles/Publication_profile";
 import Awards from "./profiles/Awards";
 import ExpectedOpportunity from "./profiles/ExpectedOpportunity";
-const socket = socketIO.connect("http://52.3.252.238:4001/");
+import {ExpertsView} from "./Screens/ExpertsView";
+import { AcademicCertificates } from "./components/ExpertsView/AcademicCertificates";
+
+const socket = socketIO.connect("http://3.84.158.17:4001/");
 
 function App() {
   console.log(socket);
@@ -95,7 +98,7 @@ function App() {
             <Route path="/Nav_Agencies" component={Nav_Agencies}></Route>
             <Route path="/Nav_Experts" component={Nav_Experts}></Route>
             <Route path="/You_Emp" component={You_Emp}></Route>
-
+            <Route path={"/ExpertsView/:employee"} component={ExpertsView}></Route>
             <Route
               path="/Input_footer"
               component={() => <Input_footer socket={socket} />}
@@ -108,6 +111,10 @@ function App() {
               path="/Connect_Emp/:client"
               component={() => <Connect_Emp socket={socket} />}
             />
+
+            <Route 
+            path="/Academic_Certificates/:employee"
+            component={AcademicCertificates}></Route>
 
             {/* <Route path="/Connect_Emp">
           <Connect_Emp socket={socket}/>

@@ -32,7 +32,7 @@ let ExpectedOpportunity = () => {
     profile = { ...profile, empId: Number(employeeId) };
     axios
       .post(
-        "http://52.3.252.238:4000/employee/saveExpectedOpportunity",
+        "http://3.84.158.17:4000/employee/saveExpectedOpportunity",
         profile,
         {
           headers: {

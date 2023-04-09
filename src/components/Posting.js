@@ -95,7 +95,7 @@ const Posting = () => {
   };
   useEffect(() => {
     axios
-      .get("http://52.3.252.238:4000/jobs/findQualifications")
+      .get("http://3.84.158.17:4000/jobs/findQualifications")
       .then((res) => {
         console.log(res);
         setEdu(res.data);
@@ -160,7 +160,7 @@ const Posting = () => {
     posting.years = Number(posting.years);
     console.log("form submitted");
     axios
-      .post("http://52.3.252.238:4000/jobs/save", posting)
+      .post("http://3.84.158.17:4000/jobs/save", posting)
       .then((response) => {
         console.log(response);
         window.alert("job Posted");
@@ -218,7 +218,7 @@ const Posting = () => {
 
     console.log(database);
     axios
-      .post("http://52.3.252.238:4000/jobs/save", database)
+      .post("http://3.84.158.17:4000/jobs/save", database)
       .then((response) => {
         console.log(response);
         window.alert("job Posted");
@@ -238,7 +238,7 @@ const Posting = () => {
 
   useEffect(() => {
     axios
-      .get("http://52.3.252.238:4000/jobs/city/")
+      .get("http://3.84.158.17:4000/jobs/city/")
       .then((response) => {
         console.log(response);
         setCities_opt(response.data);
@@ -252,7 +252,7 @@ const Posting = () => {
 
   useEffect(() => {
     axios
-      .get("http://52.3.252.238:4000/jobs/skills/")
+      .get("http://3.84.158.17:4000/jobs/skills/")
       .then((response) => {
         console.log(response);
         setSkill_opt(response.data);

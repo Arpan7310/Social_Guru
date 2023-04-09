@@ -16,7 +16,7 @@ import axios from "axios";
 import "./You.css";
 
 const Jobs = () => {
-  let API = "http://52.3.252.238:4000/jobs/findAll";
+  let API = "http://3.84.158.17:4000/jobs/findAll";
 
   const [users, setUsers] = useState([]);
   let city_name = [];

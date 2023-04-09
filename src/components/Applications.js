@@ -37,10 +37,11 @@ const Applications = () => {
   const fetchApiData = async (Id) => {
     try {
       const res = await fetch(
-        `http://52.3.252.238:4000/client/postedJobs?id=${Id}`
+        `http://3.84.158.17:4000/client/postedJobs?id=${Id}`
       );
       console.log(res);
       let x = await res.json();
+    
       setUsers(x);
     } catch (error) {
       console.log(error);
@@ -96,9 +97,7 @@ const Applications = () => {
 
         return (
           <>
-            {currentDate > date ? (
-              <div></div>
-            ) : (
+            { (
               <div className="container-fluid p-5">
                 <div className="row text-center">
                   <Container className="job-card mt-5 " id="read-more-wrap">
