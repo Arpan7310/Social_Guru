@@ -34,9 +34,7 @@ const Applicants_Modal = (props) => {
         props.setopen(false);
       })
       .catch((error) => {
-        console.log(error);
-
-        window.alert("Employee Already Hired");
+       window.alert(JSON.stringify(error?.response?.data?.message));
       });
   };
 
