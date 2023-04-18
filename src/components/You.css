@@ -41,3 +41,42 @@ color: #242424;
   padding: 15px;
   background: whitesmoke;
 }
+
+.job-card-deck {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 2rem;
+}
+.job-card {
+  height: max-content;
+  border: none;
+  box-shadow: 6px 6px 10px rgb(222, 222, 222);
+  padding: 1rem;
+  position: relative;
+}
+.job-date {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.duration > span:first-child, .typeofwork > span:first-child, .worklocation > span:first-child, .language > span:first-child, .experience > span:first-child   {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.job-content {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto auto;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .job-card-deck {
+    grid-template-columns: auto;
+  }
+}
+@media screen and (max-width: 464px){
+  .job-content {
+    grid-template-columns: auto;
+  }
+}

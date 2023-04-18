@@ -21,17 +21,12 @@ const Jobs = () => {
   const [users, setUsers] = useState([]);
   let city_name = [];
   const fetchApiData = async (url) => {
-    try{
-            const res = await fetch(url);
-            setUsers(await res.json());
-            
-
-            
-        } 
-        catch(error){
-            console.log(error);
-  
-        }
+    try {
+      const res = await fetch(url);
+      setUsers(await res.json());
+    } catch (error) {
+      console.log(error);
+    }
     /* try {
       let res = await fetch(url);
       let json = await res.json();
@@ -96,7 +91,8 @@ const Jobs = () => {
           </form>
         </div>
       </div>
-      <div className="container-fluid mt-2 p-5">
+
+      {/* <div className="container-fluid mt-2 p-5">
         <div className="row text-center">
           {users.map((curElem, index) => {
             for (let i in curElem.cities) {
@@ -165,7 +161,6 @@ const Jobs = () => {
                             </>
                           );
                         })}
-                        {/* <Yourjob open={() => setViewJob(curElem)}/> */}
                       </Col>
                     </Row>
                     <Row className="mt-3">
@@ -215,6 +210,81 @@ const Jobs = () => {
             );
           })}
         </div>
+      </div> */}
+      <div className="container-fluid m-2 p-5 job-card-deck">
+        {users.map((each, index) => {
+          return (
+            <>
+              <div className="job-card">
+                <h1>{each.jobprofile}</h1>
+                <div className="job-date">
+                  <span>End Date: </span>
+                  <span>{each.endDate.substring(0, 10)}</span>
+                </div>
+                <p>{each.jobdescription}</p>
+                <div className="job-content">
+                  <div className="job-skills">
+                    <h3>Skills Required</h3>
+                    <ul
+                      style={{
+                        listStyle: "none",
+                        display: "grid",
+                        gridTemplateColumns: "auto auto",
+                        padding: "0",
+                      }}
+                    >
+                      {each.skills.map((each) => {
+                        return (
+                          <>
+                            <li>{each.skill} </li>
+                          </>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                  <div className="duration">
+                    <span>Duration: </span>
+                    <span>{each.duration}</span>
+                  </div>
+                  <p>
+                    Stipend :- ₹ {each.stipendamountmax} / Month (Performance
+                    Based)
+                  </p>
+                  <div className="typeofwork">
+                    <span>Type of Work: </span>
+                    <span>{each.typeofwork}</span>
+                  </div>
+                  <div className="worklocation">
+                    <span>Work Location: </span>
+                    <span>{each.worklocation}</span>{" "}
+                  </div>
+                  <div className="language">
+                    <span>Language: </span>
+                    <span>{each.language}</span>
+                  </div>
+                  <div className="experience">
+                    <span>Years: </span>
+                    <span>{each.years}</span>
+                  </div>
+                </div>
+                <Button variant="outline-dark" onClick={() => opening(index)} style={{marginTop: '1rem'}}>
+                  Apply
+                </Button>
+                {open && element === index && (
+                  <Yourjob
+                    job_id={each.id}
+                    Company={each.client.organizationname}
+                    Profile={each.jobprofile}
+                    open={open}
+                    setOpen={setOpen}
+                    Responsible={each.responsibilities}
+                    Slots={each.total}
+                  />
+                )}
+              </div>
+            </>
+          );
+        })}
       </div>
     </>
   );
