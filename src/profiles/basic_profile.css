@@ -1,6 +1,14 @@
+.main-page {
+    display: flex;
+    gap: 4rem;
+}
+.main-form-page {
+    margin: 0 auto;
+}
 .basic_profile_header {
     text-align: center;
     margin-bottom: 4rem;
+    margin-top: 4rem;
 }
 .basic_profile_form {
     max-width: 1240px;

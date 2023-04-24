@@ -1,0 +1,19 @@
+.sideNav {
+    position: sticky;
+    top: 73px;
+    width: 220px;
+    height: 100vh;
+    background: #f4f2f5;
+}
+.nav-list {
+    padding: 0.5rem;
+    list-style: none;
+}
+.list-item {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+}
+.list-item:hover {
+    background: #e2dee5;
+}

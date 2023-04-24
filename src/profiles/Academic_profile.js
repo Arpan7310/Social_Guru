@@ -3,6 +3,7 @@ import axios from "axios";
 import { useState } from "react";
 import NavBar3 from "../components/NavBar3";
 import Nav_Experts from "../components/Nav_Experts";
+import SideNavbar from "../components/SideNavbar";
 
 let Academic_profile = () => {
   let [profile, setProfile] = useState({
@@ -46,91 +47,103 @@ let Academic_profile = () => {
   return (
     <>
       <Nav_Experts />
-      <NavBar3 />
-      <h1 className="basic_profile_header">Complete Your Academic profile</h1>
-      <form
-        className="basic_profile_form"
-        method="POST"
-        onSubmit={handleSubmit}
-      >
-        <div className="basic_profile_field">
-          <div>
-            <label htmlFor="educationalQualification">
-              Educational Qualification:{" "}
-            </label>
-          </div>
-          <input
-            type={"text"}
-            name="educationalQualification"
-            onChange={handleChange}
-            required
-          />
+      {/* <NavBar3 /> */}
+      <section className="main-page">
+        <SideNavbar />
+        <div className="main-form-page">
+          <h1 className="basic_profile_header">
+            Complete Your Academic profile
+          </h1>
+          <form
+            className="basic_profile_form"
+            method="POST"
+            onSubmit={handleSubmit}
+          >
+            <div className="basic_profile_field">
+              <div>
+                <label htmlFor="educationalQualification">
+                  Educational Qualification:{" "}
+                </label>
+              </div>
+              <input
+                type={"text"}
+                name="educationalQualification"
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="basic_profile_field">
+              <div>
+                <label htmlFor="course">Course:</label>
+              </div>
+              <input
+                type={"text"}
+                name="course"
+                required
+                onChange={handleChange}
+              />
+            </div>
+            <div className="basic_profile_field">
+              <div>
+                <label htmlFor="specialisation">specialisation: </label>
+              </div>
+              <input
+                type={"text"}
+                onChange={handleChange}
+                required
+                name="specialisation"
+              />
+            </div>
+            <div className="basic_profile_field">
+              <div>
+                <label htmlFor="institute">institute: </label>
+              </div>
+              <input
+                type={"text"}
+                onChange={handleChange}
+                required
+                name="institute"
+              />
+            </div>
+            <div className="basic_profile_field">
+              <div>
+                <label htmlFor="coursestart">coursestart: </label>
+              </div>
+              <DatePicker
+                selected={startDate}
+                onChange={(date) => setStartDate(date.toISOString())}
+              />
+            </div>
+            <div className="basic_profile_field">
+              <div>
+                <label htmlFor="courseend">courseend: </label>
+              </div>
+              <DatePicker
+                selected={endDate}
+                onChange={(date) => setEndDate(date.toISOString())}
+              />
+            </div>
+            <div className="basic_profile_field">
+              <div>
+                <label htmlFor="percentage">percentage: </label>
+              </div>
+              <input
+                type={"number"}
+                name="percentage"
+                required
+                onChange={handleChange}
+              />
+            </div>
+            <div className="submit">
+              <input
+                type={"submit"}
+                value="submit"
+                style={{ padding: "0.8rem 1.8rem" }}
+              />
+            </div>
+          </form>
         </div>
-        <div className="basic_profile_field">
-          <div>
-            <label htmlFor="course">Course:</label>
-          </div>
-          <input type={"text"} name="course" required onChange={handleChange} />
-        </div>
-        <div className="basic_profile_field">
-          <div>
-            <label htmlFor="specialisation">specialisation: </label>
-          </div>
-          <input
-            type={"text"}
-            onChange={handleChange}
-            required
-            name="specialisation"
-          />
-        </div>
-        <div className="basic_profile_field">
-          <div>
-            <label htmlFor="institute">institute: </label>
-          </div>
-          <input
-            type={"text"}
-            onChange={handleChange}
-            required
-            name="institute"
-          />
-        </div>
-        <div className="basic_profile_field">
-          <div>
-            <label htmlFor="coursestart">coursestart: </label>
-          </div>
-          <DatePicker
-            selected={startDate}
-            onChange={(date) => setStartDate(date.toISOString())}
-          />
-        </div>
-        <div className="basic_profile_field">
-          <div>
-            <label htmlFor="courseend">courseend: </label>
-          </div>
-          <DatePicker
-            selected={endDate}
-            onChange={(date) => setEndDate(date.toISOString())}
-          />
-        </div>
-        <div className="basic_profile_field">
-          <div>
-            <label htmlFor="percentage">percentage: </label>
-          </div>
-          <input
-            type={"number"}
-            name="percentage"
-            required
-            onChange={handleChange}
-          />
-        </div>
-        <div className="submit">
-          <input
-            type={"submit"}
-            value="submit"
-            style={{ padding: "0.8rem 1.8rem" }}
-          />
-        </div>
-      </form>
+      </section>
     </>
   );
 };

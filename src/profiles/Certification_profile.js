@@ -4,6 +4,7 @@ import axios from "axios";
 import { useState } from "react";
 import NavBar3 from "../components/NavBar3";
 import Nav_Experts from "../components/Nav_Experts";
+import SideNavbar from "../components/SideNavbar";
 
 let Certification_profile = () => {
   let [profile, setProfile] = useState({
@@ -42,7 +43,10 @@ let Certification_profile = () => {
   return (
     <>
       <Nav_Experts />
-      <NavBar3 />
+      {/* <NavBar3 /> */}
+      <section className="main-page">
+      <SideNavbar />
+      <div className="main-form-page">
       <h1 className="basic_profile_header">Complete Your Certification profile</h1>
       <form
         className="basic_profile_form"
@@ -87,6 +91,8 @@ let Certification_profile = () => {
         </div>
         <div><input type={"submit"} value={"submit"} /></div>
       </form>
+      </div>
+      </section>
     </>
   );
 };
